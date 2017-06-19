@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+    <class name="Entities.Revista" table="revistes">
+        <meta attribute="class-description">This class contains magazine detail.</meta>
+        <id name="id_revista" type="int" column="id_revista"></id>
+        <property name="titol" column="titol" type="string"/>
+        <property name="data_publicacio" column="data_publicacio" type="date"/>
+     </class>
+</hibernate-mapping>
+    

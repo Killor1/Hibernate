@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+    <class name="Entitieis.Article" table="articles">
+        <meta attribute="class-description">
+            This class contains the revista  detail. 
+        </meta>
+        <id name="id_article" type="int" column="id_article"/>
+        <many-to-one name="autor" column="id_autor" class="Entitieis.Autor" 
+             cascade="all" not-null="false" unique="true"/>
+        <property name="titol" column="titol" type="string"/>
+        <property name="data_creacio" column="data_creacio" type="date"/>      
+        <property name="publicable" column="publicable" type="boolean"/>        
+    </class>
+</hibernate-mapping>
